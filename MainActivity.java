@@ -37,7 +37,7 @@ public static boolean isRightPressed = false;
 
         leftButton.setOnTouchListener(this); // и добавляем этот класс как слушателя (при нажатии сработает onTouch)
         rightButton.setOnTouchListener(this);
-        upButton.setOnTouchListener(this); // и добавляем этот класс как слушателя (при нажатии сработает onTouch)
+        upButton.setOnTouchListener(this); 
         downButton.setOnTouchListener(this);
 
     }
