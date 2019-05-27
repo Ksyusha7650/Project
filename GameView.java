@@ -27,7 +27,7 @@ class GameView extends SurfaceView implements Runnable {
     private ArrayList<Flower> flowers = new ArrayList<>();
     private ArrayList<Hill> hills = new ArrayList<>();
     ArrayList<Rectangle> rects;
-    private final int FLOWER_INTERVAL = 50;// время через которое появляются астероиды (в итерациях)
+    private final int FLOWER_INTERVAL = 50;
     private final int HILL_INTERVAL = 150;
     private int currentTime, scroll = 0;
     public static int score = 0;
@@ -40,7 +40,7 @@ class GameView extends SurfaceView implements Runnable {
         gameThread = new Thread(this);
         gameThread.start();
     }
-// //   private void checkCollision(){ // перебираем все астероиды и проверяем не касается ли один из них корабля
+// //   private void checkCollision(){
 //        for (Flower flower : flowers) {
 //            if(flower.isCollision(ted.x, ted.y, ted.size)){
 //                // игрок проиграл
@@ -49,7 +49,7 @@ class GameView extends SurfaceView implements Runnable {
 //            }
 //        }
    // }
-private void checkIfNewHill(){ // каждые 50 итераций добавляем новый астероид
+private void checkIfNewHill(){
     if(currentTime >= HILL_INTERVAL){
         Hill hill = new Hill(getContext());
         hills.add(hill);
@@ -58,7 +58,7 @@ private void checkIfNewHill(){ // каждые 50 итераций добавл�
         currentTime ++;
     }
 }
-    private void checkIfNewFlower(){ // каждые 50 итераций добавляем новый астероид
+    private void checkIfNewFlower(){
         if(scroll >= FLOWER_INTERVAL ) {
               Flower flower = new Flower(getContext());
               flowers.add(flower);

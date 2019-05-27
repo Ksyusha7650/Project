@@ -13,7 +13,7 @@ class Ted extends Elements {
         init(context);
     }
     @Override
-    public void update() { // перемещаем корабль в зависимости от нажатой кнопки
+    public void update() { // перемещаем мишку в зависимости от нажатой кнопки
         if(MainActivity.isLeftPressed && x >= 0){
             x -= speed;
         }
