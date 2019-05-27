@@ -6,8 +6,6 @@ import java.util.Random;
 
 class Flower extends Elements {
     private int radius = 2; // радиус
-    private float minSpeed = (float) 0.1; // минимальная скорость
-    private float maxSpeed = (float) 0.5;
 
 
     public Flower(Context context) {
