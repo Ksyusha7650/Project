@@ -12,6 +12,7 @@ public class Elements extends Rectangle {
     protected float x; // координаты
     protected float y;
     protected float size; // размер
+    protected float height, width;
     protected float speed; // скорость
     protected int bitmapId; // id картинки
     protected Bitmap bitmap; // картинка
@@ -19,7 +20,8 @@ public class Elements extends Rectangle {
     void init(Context context) { // сжимаем картинку до нужных размеров
         Bitmap cBitmap = BitmapFactory.decodeResource(context.getResources(), bitmapId);
         bitmap = Bitmap.createScaledBitmap(
-                cBitmap, (int) (size * GameView.unitW), (int) (size * GameView.unitH), false);
+                cBitmap,(int) (width * GameView.unitW),   (int) (height * GameView.unitH),false);
+
         cBitmap.recycle();
     }
 
@@ -27,6 +29,7 @@ public class Elements extends Rectangle {
     }
 
     void draw(Paint paint, Canvas canvas) { // рисуем картинку
-        canvas.drawBitmap(bitmap, x * GameView.unitW, y * GameView.unitH, paint);
+         canvas.drawBitmap(bitmap, x* GameView.unitW, y* GameView.unitH , paint);
+
     }
 }
