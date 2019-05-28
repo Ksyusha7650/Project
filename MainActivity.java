@@ -6,7 +6,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,19 +25,26 @@ public static boolean isRightPressed = false;
         LinearLayout gameLayout = (LinearLayout) findViewById(R.id.gameLayout); // находим gameLayout
         gameLayout.addView(gameView); // и добавляем в него gameView
 
+
         Button leftButton = (Button) findViewById(R.id.left); // находим кнопки
         Button rightButton = (Button) findViewById(R.id.right);
         Button upButton = (Button)findViewById(R.id.up);
         Button downButton = (Button)findViewById(R.id.down);
-        TextView sc = (TextView)findViewById(R.id.score);
-        sc.setText(GameView.score);
+//        TextView sc = (TextView)findViewById(R.id.score);
+//        sc.setText(GameView.score);
+//        Button settings = (Button)findViewById(R.id.settings);
+    //    Button pause = (Button)findViewById(R.id.pause);
+//        ImageView imageView = (ImageView)findViewById(R.id.imageView);
+//        imageView.setImageResource(R.drawable.bg);
 
 
 
         leftButton.setOnTouchListener(this); // и добавляем этот класс как слушателя (при нажатии сработает onTouch)
         rightButton.setOnTouchListener(this);
-        upButton.setOnTouchListener(this); 
+        upButton.setOnTouchListener(this); // и добавляем этот класс как слушателя (при нажатии сработает onTouch)
         downButton.setOnTouchListener(this);
+   //     pause.setOnTouchListener(this);
+//        settings.setOnTouchListener(this);
 
     }
 
@@ -87,7 +93,18 @@ public static boolean isRightPressed = false;
                         break;
                 }
                 break;
-        }
+
+//        case R.id.pause:
+//        switch (motion.getAction()) { // определяем нажата или отпущена
+//            case MotionEvent.ACTION_DOWN:
+//                GameView.gameRunning = false;
+//                break;
+//            case MotionEvent.ACTION_UP:
+//                GameView.gameRunning = true;
+//                break;
+//        }
+//        break;
+    }
         return true;
     }
 }
