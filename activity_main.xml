@@ -7,37 +7,35 @@
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
+
     <Button
         android:id="@+id/down"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="2dp"
-        android:text="down"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="1dp"
+        android:background="@mipmap/down1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/up"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/up"
-        app:layout_constraintTop_toBottomOf="@+id/score"
-        app:layout_constraintVertical_bias="0.93" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/up"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="59dp"
-        android:layout_marginEnd="57dp"
-        android:text="up"
-        app:layout_constraintBottom_toTopOf="@+id/left"
-        app:layout_constraintEnd_toEndOf="@+id/right"
-        app:layout_constraintStart_toStartOf="@+id/left" />
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="50dp"
+        android:background="@mipmap/up"
+        app:layout_constraintBottom_toTopOf="@+id/down"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/left"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="32dp"
-        android:text="left"
-        app:layout_constraintBaseline_toBaselineOf="@+id/right"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="50dp"
+        android:background="@mipmap/left"
+        app:layout_constraintBottom_toBottomOf="@+id/down"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -45,37 +43,21 @@
         android:id="@+id/right"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="52dp"
-        android:text="right"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="52dp"
+        android:background="@mipmap/right"
+        app:layout_constraintBottom_toTopOf="@+id/down"
         app:layout_constraintStart_toEndOf="@+id/left" />
-
-    <TextView
-        android:id="@+id/score"
-        android:layout_width="300dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="140dp"
-        android:layout_weight="1"
-        android:text="@string/score"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintStart_toStartOf="@+id/gameLayout"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <LinearLayout
         android:id="@+id/gameLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="731dp"
+        android:layout_height="411dp"
+        android:layout_marginBottom="1dp"
         android:layout_weight="100"
         android:orientation="horizontal"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintStart_toStartOf="parent">
 
 
     </LinearLayout>
